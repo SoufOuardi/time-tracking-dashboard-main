@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Time tracking dashboard</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    body {
+      font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+    }
+    .time-data:hover .time-data-overlay {
+      display: block;
+    }
+
+    
+  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./src/output.css">
+</head>
+<body class="flex bg-[#0f1424] min-h-screen flex-col justify-center max-lg:my-16 items-center">
+  <div class="containerx w-full flex max-lg:flex-col max-lg:items-center gap-6 px-4">
+    <section class="profile rounded-2xl flex-shrink-0 lg:max-w-[320px] lg:min-w-[320px] bg-[#1c1f4a]">
+      <div class="profile-data max-lg:py-8 lg:py-24 xl:py-8 rounded-2xl px-6 flex lg:flex-col gap-6 max-lg:items-center xl:items-start bg-[#5847eb]">
+        <div >
+          <img class="rounded-full lg:mb-4 border-4 border-white" width="70px" src="./images/image-jeremy.png" />
+        </div>
+        <div>
+          <p class="lg:text-start">Report for</p>
+          <p class="text-white lg:pr-48 text-wrap lg:font-extralight lg:text-[52px] text-[24px] leading-none xl:mb-7">Jeremy Robson</p>
+        </div>
+      </div>
+      <div class="time-data px-8 py-4 flex max-lg:justify-between lg:flex-col lg:gap-2 lg:items-start lg:justify-center w-full">
+        <p onclick="dailyChange()" class="btn--date cursor-pointer text-[#bdc1ff8c]">Daily</p>
+        <p onclick="WeeklyChange()" class="btn--date cursor-pointer text-[#e6e2e2]">Weekly</p>
+        <p onclick="MonthlyChange()" class="btn--date cursor-pointer text-[#bdc1ff8c]">Monthly</p>
+      </div>
+    </section>
+
+<!-- First Article Of Top Section -->
+<!-- First Article Of Top Section -->
+    <article class="flex flex-grow max-lg:flex-col max-lg:items-center gap-5 flex-wrap">
+      <!-- First Post Of Top Section -->
+            <!-- First Post Of Top Section -->
+
+      <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#ff8c66]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-work.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white opacity-55 hidden time-data-overlay cursor-pointer absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Work</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">32hrs</p>
+          <p class="last-week">Last Week - 36hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- second Post Of Top Section -->
+    <!-- second Post Of Top Section -->
+
+    <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#56c2e6]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-play.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white opacity-55 hidden time-data-overlay cursor-pointer absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Play</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">10hrs</p>
+          <p class="last-week">Last Week - 8hrs</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- third Post Of Top Section -->
+    <!-- third Post Of Top Section -->
+
+
+    <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#ff5c7c]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-study.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white opacity-55 hidden time-data-overlay cursor-pointer absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Study</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">4hrs</p>
+          <p class="last-week">Last Week - 7hrs</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#4acf81]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-exercise.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white time-data-overlay cursor-pointer opacity-55 hidden absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Exercice</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">4hrs</p>
+          <p class="last-week">Last Week - 5hrs</p>
+        </div>
+      </div>
+    </section>
+
+
+
+
+    <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#7536d3]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-social.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white hidden time-data-overlay cursor-pointer opacity-55 absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Social</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">5hrs</p>
+          <p class="last-week">Last Week - 10hrs</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="profile rounded-2xl overflow-hidden text-white min-w-[300px] max-w-[375px] flex-shrink-0 flex-grow bg-[#f1c65b]">
+      <div class="relative overflow-hidden profile-data py-5 rounded-2xl px-6 flex gap-6 items-center">
+        <img class="absolute right-5" src="./images/icon-self-care.svg"/>
+      </div>
+      <div class="time-data relative overflow-hidden py-4 h-full rounded-2xl xl:flex xl:flex-col xl:gap-6 px-8 w-full bg-[#1c1f4a]">
+        <div class="bg-white hidden time-data-overlay cursor-pointer opacity-55 absolute w-full h-full top-0 left-0"></div>
+        <div class="flex justify-between">
+          <p class="font-semibold">Self Care</p>
+          <ion-icon class="text-[24px] text-right  text-white" name="ellipsis-horizontal"></ion-icon>
+        </div>
+        <div class="flex flex-col pb-2 ">
+          <p class="activity text-[32px]">2hrs</p>
+          <p class="last-week">Last Week - 2hrs</p>
+        </div>
+      </div>
+    </section>
+    
+
+</article>
+
+
+
+  </div>
+
+  
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+<script>
+var dataArray = [];
+var lastWeekData = [];
+
+var timeActivity = document.querySelectorAll(".activity");
+var dateSet = document.querySelectorAll(".btn--date");
+var lastWeek = document.querySelectorAll(".last-week")
+
+timeActivity.forEach(element => {
+      var initialValue = element.textContent.match(/\d+/g);
+      dataArray.push(initialValue);
+});
+lastWeek.forEach(element => {
+      var initialValueWeek = element.textContent.match(/\d+/g);
+      lastWeekData.push(initialValueWeek);
+});
+
+// function to reset all Colors after
+//      clicking on a btn
+var resetColorOfDate = function(){
+  dateSet.forEach(element => {
+        element.style.color = "#bdc1ff8c";
+      });
+       setDaily = false;
+       setWeekly = false;
+       setMonthly = false;
+}
+
+// to know and save what is
+//     btn clicked
+var setDaily = false;
+var setWeekly = true;
+var setMonthly = false;
+
+var dailyChange = function(){
+  var i=0;
+  !setDaily ? timeActivity.forEach(element => {
+      // var initialValue = element.textContent.match(/\d+/g);
+      var initialValue = Number(dataArray[i]) / 7;
+      initialValue = parseFloat(initialValue.toFixed(1));
+      initialValue >= 1 ? element.textContent = initialValue + "hrs" : element.textContent = (initialValue * 60) + "min";
+      i++;
+   }) : "";
+  resetColorOfDate();
+  setDaily = true;
+  dateSet[0].style.color = "#e6e2e2";
+}
+
+  var WeeklyChange = function(){
+    var i = 0;
+    !setWeekly ? timeActivity.forEach(element => {
+      element.textContent = dataArray[i] + "hrs";
+      i++;
+   }) : "";
+    resetColorOfDate();
+    setWeekly = true;
+    dateSet[1].style.color = "#e6e2e2";
+  }
+
+  var MonthlyChange = function(){
+    var i=0;
+    !setMonthly ? timeActivity.forEach(element => {
+      element.textContent = Number(dataArray[i]) + Number(lastWeekData[i]) + "hrs";
+      i++;
+   }) : "";
+    resetColorOfDate();
+    setMonthly = true;
+    dateSet[2].style.color = "#e6e2e2";
+    
+  }
+
+</script>
+</body>
+</html>
